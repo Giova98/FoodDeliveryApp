@@ -223,6 +223,46 @@ option {
     font-size: 15px;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.is-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+}
+
+.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Definir los retrasos para cada elemento */
+.elementor-repeater-item-7ff727f {
+    animation-delay: 0.5s;
+}
+
+.elementor-repeater-item-b4772af {
+    animation-delay: 1s;
+}
+
+.elementor-repeater-item-ffcf205 {
+    animation-delay: 1.5s;
+}
+
+.elementor-repeater-item-b0b3fa4 {
+    animation-delay: 2s;
+}
+
 @media  (max-width: 800px) {
     .Pie_de_pagina .Grupo-1{
         width: 90%;
