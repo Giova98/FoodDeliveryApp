@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: whitesmoke;
+}
+
+.logo{
+    max-width: 5rem;
+}
+
+.navegacion{
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navegacion li a {
+    text-decoration: none;
+    color: black;
+}
+
+.abrir-menu{
+    display: none;
+}
+
+@media  and (max-width: 550px){
+    .abrir-menu{
+        display: block;
+    }
+}
