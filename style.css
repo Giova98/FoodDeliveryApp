@@ -153,6 +153,12 @@ option {
     background-color: whitesmoke;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 5%;
+}
+
+.lomas{
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 .carr, .carr0 {
@@ -301,4 +307,64 @@ figure a img :hover{
         grid-gap: 30px;
         padding: 35px 0px;
     }
+}
+
+.swiffy-slider {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-container li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-container img {
+    height: 350px;
+    width: 1400px;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.slider-nav-prev {
+    left: 10px;
+}
+
+.slider-nav-next {
+    right: 10px;
+}
+
+.slider-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.slider-indicators button {
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-indicators button.active {
+    background-color: #333;
 }
