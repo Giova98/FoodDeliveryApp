@@ -159,6 +159,11 @@ option {
 .Pie_de_pagina{
     width: 100%;
     background-color: rgba(255, 68, 0, 0.795);
+    transition: background-color 0.3s ease;
+}
+
+footer:hover {
+    background-color: rgba(255, 68, 0, 1);
 }
 
 .Pie_de_pagina .Grupo-1{
@@ -181,7 +186,10 @@ option {
 
 .Pie_de_pagina .box figure img{
     width: 250px;
-     
+}
+
+figure a img :hover{
+    transform: scale(1.1);
 }
 
 .Pie_de_pagina .box h2{
