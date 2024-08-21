@@ -1,0 +1,92 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: rgba(255, 68, 0, 0.76);
+    margin-bottom: 2%;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: rgba(255, 68, 0, 0.815);
+}
+
+.logo {
+    max-width: 5rem;
+    transition: transform 0.3s ease;
+}
+
+header:hover .logo {
+    transform: scale(1.1);
+}
+
+.navegacion {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navegacion li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navegacion li a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.abrir-menu {
+    display: none;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-right: 50%;
+}
+
+.elUL{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.fotos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.epigrafe{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 68, 0, 0.76);
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer li:hover {
+    color: black;
+    font-weight: 600;
+}
