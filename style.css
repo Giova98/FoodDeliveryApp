@@ -175,6 +175,11 @@ option {
     width: 40px;
 }
 
+.card{
+  overflow: hidden;
+  display: none;
+}
+
 /*A partir de aca viene el footer*/
 
 .Pie_de_pagina{
