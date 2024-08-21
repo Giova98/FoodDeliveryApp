@@ -1,0 +1,18 @@
+cuando quiero pushear el cambio que hice:
+	
+	-git add .
+
+	
+
+comentar los cambios echos
+
+	git commit -m 
+
+.git push 
+
+en caso de que la rama este en master, se pone origin master pero si queres pushear la ramar que se llame "ramita"
+
+se pone push ramita
+
+en caso de traer los cambios echos por los compañeros se debe poner git pull + la rama ej origin master
+
