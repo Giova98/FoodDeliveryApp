@@ -334,6 +334,12 @@ figure a img :hover{
     }
 }
 
+<<<<<<< HEAD
+.elegir .helados{
+    width: 150px;
+    height: 100px;
+}
+=======
 .swiffy-slider {
     position: relative;
     width: 300px;
@@ -393,3 +399,4 @@ figure a img :hover{
 .slider-indicators button.active {
     background-color: #333;
 }
+>>>>>>> 909ed8d31bc241109ed8318b786db49e1a8eadab

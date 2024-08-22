@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: rgba(255, 68, 0, 0.76);
+    margin-bottom: 2%;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: rgba(255, 68, 0, 0.815);
+}
+
+.logo {
+    max-width: 5rem;
+    transition: transform 0.3s ease;
+}
+
+header:hover .logo {
+    transform: scale(1.1);
+}
+
+.navegacion {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navegacion li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navegacion li a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.abrir-menu {
+    display: none;
+}
+
+html {
+    background-color: whitesmoke;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-right: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.795);
+    margin-bottom: 2%;
+}
+
+hr{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.dos{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+.elUL{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-left: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 4%;
+}
+
+.fotos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.foto-contenedor {
+    text-align: center;
+}
+
+.foto-contenedor img{
+    border-radius: 20px;
+}
+
+.foto-contenedor img:hover{
+    width: 350px;
+    transition: width 0.4s ease;
+}
+
+.foto-contenedor p {
+    margin-top: 5px;
+    font-size: 1.1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+.mapa{
+    display: flex;
+    justify-content: start;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+}
+
+.mapa img{
+    width: 700px;
+    height: auto;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.mapa ul{
+    font-size: large;
+    font-family: sans-serif;
+    padding: 70px;
+}
+
+.mapa a{
+    text-decoration: none;
+}
+
+.mapa a:hover{
+    padding: 8px;
+    text-decoration:underline;
+}
+
+.footer {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 68, 0, 0.76);
+    padding: 20px;
+    color: whitesmoke;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer li:hover {
+    color: black;
+    font-weight: 600;
+}
