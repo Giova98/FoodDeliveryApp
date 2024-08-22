@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -42,6 +49,10 @@ header:hover .logo {
     display: none;
 }
 
+html {
+    background-color: whitesmoke;
+}
+
 .titulo{
     display: flex;
     justify-content: center;
@@ -49,6 +60,7 @@ header:hover .logo {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     color: rgba(0, 0, 0, 0.795);
+    margin-bottom: 2%;
 }
 
 hr{
@@ -66,6 +78,10 @@ hr{
     font-family: sans-serif;
     display: flex;
     justify-content: center;
+    margin-left: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 4%;
 }
 
 .fotos {
