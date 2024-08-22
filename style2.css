@@ -46,22 +46,81 @@ header:hover .logo {
     display: flex;
     justify-content: center;
     margin-right: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.795);
 }
 
-.elUL{
-    display: flex;
-    justify-content: center;
+hr{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.dos{
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 5%;
 }
 
-.fotos{
+.elUL{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.fotos {
     display: flex;
     justify-content: space-evenly;
 }
 
-.epigrafe{
+.foto-contenedor {
+    text-align: center;
+}
+
+.foto-contenedor img{
+    border-radius: 20px;
+}
+
+.foto-contenedor img:hover{
+    width: 350px;
+    transition: width 0.4s ease;
+}
+
+.foto-contenedor p {
+    margin-top: 5px;
+    font-size: 1.1em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+.mapa{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+}
+
+.mapa img{
+    width: 700px;
+    height: auto;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.mapa ul{
+    font-size: large;
+    font-family: sans-serif;
+    padding: 70px;
+}
+
+.mapa a{
+    text-decoration: none;
+}
+
+.mapa a:hover{
+    padding: 8px;
+    text-decoration:underline;
 }
 
 .footer {
