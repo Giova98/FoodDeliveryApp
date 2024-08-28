@@ -19,13 +19,18 @@ header:hover {
     background-color: rgba(255, 68, 0, 0.815);
 }
 
+.title-logo{
+    display: flex;
+    align-items: center;
+    margin-right: 60%;
+}
+
 .logo {
     display: flex;
     width: 125px;
     height: 125px;
     max-width: 5rem;
     transition: transform 0.3s ease;
-    margin-right: 60%;
 }
 
 .titulo h1{
@@ -33,10 +38,10 @@ header:hover {
     font-weight: 700;
     border-radius: 5px;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(33, 15, 199, 0.1);
     font-weight: bold;
     font-size: 40px;
-    margin-right: 200%;
+    margin-left: 40%;
 }
 
 header:hover .logo {
