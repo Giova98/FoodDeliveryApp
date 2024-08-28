@@ -1,232 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Delivery app</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="Cards.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/209182f4d9.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
-        defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
-        crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="Cards.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/209182f4d9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="logo">
-            <img src="assets/logo.png" alt="Logo del sitio" />
-        </div>
-        <div class="titulo">
-            <h1>CAPYFOOD</h1>
-        </div>
-        <button class="abrir-menu">Abrir</button>
-        <nav class="navegacion">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Quienes somos</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Registrarte</a></li>
-        </nav>
+      <div class="logo">
+        <img src="assets/logo.png" alt="Logo del sitio" />
+      </div>
+      <div class="titulo">
+        <h1>CAPYFOOD</h1>
+      </div>
+      <button class="abrir-menu">Abrir</button>
+      <nav class="navegacion">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Quienes somos</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Registrarte</a></li>
+        </ul>
+      </nav>
     </header>
 
     <div class="filtrar">
-        <h3>Filtrar por:</h3>
+      <h3>Filtrar por:</h3>
 
-        <div class="buttons">
-            <button>
-                <img src="https://cdn.icon-icons.com/icons2/1673/PNG/512/arrowheadrightoutline_110742.png" alt=""
-                    height="20" />
-            </button>
-            <button>Promos</button>
-            <button>Cupones</button>
-            <button>Novedades</button>
-        </div>
+      <div class="buttons">
+        <button>
+          <img
+            src="https://cdn.icon-icons.com/icons2/1673/PNG/512/arrowheadrightoutline_110742.png"
+            alt=""
+            height="20"
+          />
+        </button>
+        <button>Promos</button>
+        <button>Cupones</button>
+        <button>Novedades</button>
+      </div>
 
-        <div class="relev">
-            <h3>Ordenar por:</h3>
-            <select class="seleccion">
-                <option value="">Relevancia</option>
-                <option value="">Clasificacion</option>
-                <option value="">Tiempo de entrega</option>
-                <option value="">Envio gratis a domicilio</option>
-            </select>
-        </div>
+      <div class="relev">
+        <h3>Ordenar por:</h3>
+        <select class="seleccion">
+          <option value="">Relevancia</option>
+          <option value="">Clasificacion</option>
+          <option value="">Tiempo de entrega</option>
+          <option value="">Envio gratis a domicilio</option>
+        </select>
+      </div>
     </div>
 
     <h3 class="quevas">¿ Que vas a llevar hoy ?</h3>
     <div class="carrusel1">
-        <div class="carr0-container">
-            <img class="carr0"
-                src="https://w7.pngwing.com/pngs/532/975/png-transparent-hamburger-illustration-hamburger-fast-food-cheeseburger-chicken-sandwich-coleslaw-hamburger-icon-miscellaneous-fast-food-restaurant-monochrome-thumbnail.png"
-                alt="" />
-            <p>Burgers</p>
-        </div>
-        <div class="carr0-container">
-            <img class="carr0"
-                src="https://images.vexels.com/media/users/3/157230/isolated/preview/32f8e717216dadf6c768e1554378be89-icono-de-rebanada-de-pizza-simple.png"
-                alt="" />
-            <p>Pizzas</p>
-        </div>
-        <div class="carr0-container">
-            <img class="carr0" src="https://cdn-icons-png.freepik.com/512/204/204974.png" alt="" />
-            <p>Pastas</p>
-        </div>
+      <div class="carr0-container">
+        <img
+          class="carr0"
+          src="https://w7.pngwing.com/pngs/532/975/png-transparent-hamburger-illustration-hamburger-fast-food-cheeseburger-chicken-sandwich-coleslaw-hamburger-icon-miscellaneous-fast-food-restaurant-monochrome-thumbnail.png"
+          alt=""
+        />
+        <p>Burgers</p>
+      </div>
+      <div class="carr0-container">
+        <img
+          class="carr0"
+          src="https://images.vexels.com/media/users/3/157230/isolated/preview/32f8e717216dadf6c768e1554378be89-icono-de-rebanada-de-pizza-simple.png"
+          alt=""
+        />
+        <p>Pizzas</p>
+      </div>
+      <div class="carr0-container">
+        <img
+          class="carr0"
+          src="https://cdn-icons-png.freepik.com/512/204/204974.png"
+          alt=""
+        />
+        <p>Pastas</p>
+      </div>
 
-        <div class="carr0-container">
-            <img class="carr0" src="https://i.pinimg.com/originals/11/d8/c1/11d8c19e1240094389b05c206e2a2fb0.png"
-                alt="">
-            <p>Empanadas</p>
-        </div>
+      <div class="carr0-container">
+        <img
+          class="carr0"
+          src="https://i.pinimg.com/originals/11/d8/c1/11d8c19e1240094389b05c206e2a2fb0.png"
+          alt=""
+        />
+        <p>Empanadas</p>
+      </div>
 
-        <div class="carr0-container">
-            <img class="carr0" src="https://cdn-icons-png.freepik.com/512/16/16298.png" alt="" />
-            <p>Helados</p>
-        </div>
-        <div class="carr0-container">
-            <img class="carr0"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7rtO61VBt2_JNBGuDpBhqQOaO5GRtFelp1Z9o65dJTdFJXn9MkhsQS-BjFMJSVIjw9Hc&usqp=CAU"
-                alt="" />
-            <p>Panaderia</p>
-        </div>
-        <div class="carr0-container">
-            <img class="carr0" src="https://cdn-icons-png.flaticon.com/512/4987/4987363.png" alt="" />
-            <p>Cafeteria</p>
-        </div>
-        <div class="carr0-container">
-            <img class="carr0"
-                src="https://e7.pngegg.com/pngimages/474/450/png-clipart-torte-chocolate-cake-swiss-roll-computer-icons-bolo-recipe-monochrome-thumbnail.png"
-                alt="" />
-            <p>Pasteleria</p>
-        </div>
-        <div class="carr0-container">
-            <img class="carr0" src="https://cdn.icon-icons.com/icons2/390/PNG/512/wrapped-sweet_38002.png" alt="" />
-            <p>Confiteria</p>
-        </div>
+      <div class="carr0-container">
+        <img
+          class="carr0"
+          src="https://cdn-icons-png.freepik.com/512/16/16298.png"
+          alt=""
+        />
+        <p>Helados</p>
+      </div>
+      <div class="carr0-container">
+        <img
+          class="carr0"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7rtO61VBt2_JNBGuDpBhqQOaO5GRtFelp1Z9o65dJTdFJXn9MkhsQS-BjFMJSVIjw9Hc&usqp=CAU"
+          alt=""
+        />
+        <p>Panaderia</p>
+      </div>
+      <div class="carr0-container">
+        <img
+          class="carr0"
+          src="https://cdn-icons-png.flaticon.com/512/4987/4987363.png"
+          alt=""
+        />
+        <p>Cafeteria</p>
+      </div>
+      <div class="carr0-container">
+        <img
+          class="carr0"
+          src="https://e7.pngegg.com/pngimages/474/450/png-clipart-torte-chocolate-cake-swiss-roll-computer-icons-bolo-recipe-monochrome-thumbnail.png"
+          alt=""
+        />
+        <p>Pasteleria</p>
+      </div>
+      <div class="carr0-container">
+        <img
+          class="carr0"
+          src="https://cdn.icon-icons.com/icons2/390/PNG/512/wrapped-sweet_38002.png"
+          alt=""
+        />
+        <p>Confiteria</p>
+      </div>
     </div>
 
     <div class="recomendaciones">
-        <h2 class="lomas">¡Los más elegidos!</h2>
+      <h2 class="lomas">¡Los más elegidos!</h2>
     </div>
 
     <div class="swiffy-slider">
-        <ul class="slider-container">
-            <li><img src="https://images.wallpaperscraft.com/image/single/pizza_food_glass_73012_2560x1024.jpg"></li>
-            <li><img src="https://images.wallpaperscraft.com/image/single/pizza_pastry_appetizing_117398_2560x1024.jpg">
-            </li>
-            <li><img
-                    src="https://portionpadl.com/wp-content/uploads/2023/04/pizza-cutter-wheel-slicing-ham-pizza-2021-08-26-22-58-09-utc-scaled.jpg">
-            </li>
-        </ul>
+      <ul class="slider-container">
+        <li>
+          <img
+            src="https://images.wallpaperscraft.com/image/single/pizza_food_glass_73012_2560x1024.jpg"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.wallpaperscraft.com/image/single/pizza_pastry_appetizing_117398_2560x1024.jpg"
+          />
+        </li>
+        <li>
+          <img
+            src="https://portionpadl.com/wp-content/uploads/2023/04/pizza-cutter-wheel-slicing-ham-pizza-2021-08-26-22-58-09-utc-scaled.jpg"
+          />
+        </li>
+      </ul>
 
-        <button type="button" class="slider-nav"></button>
-        <button type="button" class="slider-nav slider-nav-next"></button>
+      <button type="button" class="slider-nav"></button>
+      <button type="button" class="slider-nav slider-nav-next"></button>
 
-        <div class="slider-indicators">
-            <button class="active"></button>
-            <button></button>
-            <button></button>
-        </div>
+      <div class="slider-indicators">
+        <button class="active"></button>
+        <button></button>
+        <button></button>
+      </div>
     </div>
 
     <div class="carrusel2">
-        <img class="carr" src="https://images.deliveryhero.io/image/pedidosya/restaurants/mostaza-arg-logo.jpg"
-            alt="" />
-        <img class="carr" src="https://images.deliveryhero.io/image/pedidosya/restaurants/kfc-obelisco.jpg" alt="" />
-        <img class="carr" src="https://pbs.twimg.com/profile_images/1604944600321368064/FrLrbKGB_400x400.jpg" alt="" />
-        <img class="carr"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ--1MJsy7_DWpEDHBVdc8L7Vn-neqF-M_MyA&s" alt="" />
-        <img class="carr" src="https://therockbury.com/wp-content/uploads/2014/03/subway-logo.jpg" alt="" />
-        <img class="carr"
-            src="https://s3-sa-east-1.amazonaws.com/appetit-production/companies/logos/000/003/454/medium/32191236_372104039958763_5945313895441760256_o.jpg?1602196388"
-            alt="" />
-        <img class="carr"
-            src="https://argentina.gridohelado.com/wp-content/uploads/2021/03/Imagen-Novedades-400x400-1.jpg" alt="" />
-        <img class="carr" src="https://pbs.twimg.com/profile_images/1278044653238042626/Cot2K-eN_400x400.jpg" alt="" />
-        <img class="carr" src="https://cdn.pixabay.com/photo/2017/09/03/11/05/starbucks-2709927_1280.jpg" alt="" />
-        <img class="carr"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIQNMpxQj_VoJqBtaLAaWarbnrUB7Kvqsm3zNxGxUGKnHUln7zGJPpge0OIWw2w7_feHE&usqp=CAU"
-            alt="" />
-        <img class="carr"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL0uGnYtsXVeCHlNloQzI-2Q-ahWJ0FJN8a9XgHEE7D-bk6nrYR2oN5MHhSH89-XMnVtQ&usqp=CAU"
-            alt="" />
-        <img class="carr"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLniK1VBSizEorziLWalGQmhTsk7NHxefpVMJwYIr50sADGIP5RSEv0iPDMctm7btEdbo&usqp=CAU"
-            alt="" />
-        <img class="carr"
-            src="https://www.zarla.com/images/zarla-sueo-pastelero-1x1-2400x2400-20210614-8x8gdj6k8w43m3vj7p99.png?crop=1:1,smart&width=250&dpr=2"
-            alt="" />
+      <img
+        class="carr"
+        src="https://images.deliveryhero.io/image/pedidosya/restaurants/mostaza-arg-logo.jpg"
+        alt=""
+      />
+      <img
+        class="carr"
+        src="https://images.deliveryhero.io/image/pedidosya/restaurants/kfc-obelisco.jpg"
+        alt=""
+      />
+      <img
+        class="carr"
+        src="https://pbs.twimg.com/profile_images/1604944600321368064/FrLrbKGB_400x400.jpg"
+        alt=""
+      />
+      <img
+        class="carr"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ--1MJsy7_DWpEDHBVdc8L7Vn-neqF-M_MyA&s"
+        alt=""
+      />
+      <img
+        class="carr"
+        src="https://therockbury.com/wp-content/uploads/2014/03/subway-logo.jpg"
+        alt=""
+      />
+      <img
+        class="carr"
+        src="https://s3-sa-east-1.amazonaws.com/appetit-production/companies/logos/000/003/454/medium/32191236_372104039958763_5945313895441760256_o.jpg?1602196388"
+        alt=""
+      />
+      <img
+        class="carr"
+        src="https://argentina.gridohelado.com/wp-content/uploads/2021/03/Imagen-Novedades-400x400-1.jpg"
+        alt=""
+      />
+      <img
+        class="carr"
+        src="https://pbs.twimg.com/profile_images/1278044653238042626/Cot2K-eN_400x400.jpg"
+        alt=""
+      />
+      <img
+        class="carr"
+        src="https://cdn.pixabay.com/photo/2017/09/03/11/05/starbucks-2709927_1280.jpg"
+        alt=""
+      />
+      <img
+        class="carr"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIQNMpxQj_VoJqBtaLAaWarbnrUB7Kvqsm3zNxGxUGKnHUln7zGJPpge0OIWw2w7_feHE&usqp=CAU"
+        alt=""
+      />
+      <img
+        class="carr"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL0uGnYtsXVeCHlNloQzI-2Q-ahWJ0FJN8a9XgHEE7D-bk6nrYR2oN5MHhSH89-XMnVtQ&usqp=CAU"
+        alt=""
+      />
+      <img
+        class="carr"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLniK1VBSizEorziLWalGQmhTsk7NHxefpVMJwYIr50sADGIP5RSEv0iPDMctm7btEdbo&usqp=CAU"
+        alt=""
+      />
+      <img
+        class="carr"
+        src="https://www.zarla.com/images/zarla-sueo-pastelero-1x1-2400x2400-20210614-8x8gdj6k8w43m3vj7p99.png?crop=1:1,smart&width=250&dpr=2"
+        alt=""
+      />
     </div>
-<<<<<<< HEAD
+    <<<<<<< HEAD
 
     <div class="elegir">
-        <h3>2X1 en helados</h3>
-         <img class="helados" src="assets/imagen-de-helado-mc.jpg" alt="">
-         <img class="helados" src="assets/2Banner-web-Peru-tentacion-mobile.jpg" alt="">
-         <img class="helados" src="assets/arcor.jpg" alt="">
-         <img class="helados" src="assets/home-1700669037231.jpg" alt="">
-       
-
+      <h3>2X1 en helados</h3>
+      <img class="helados" src="assets/imagen-de-helado-mc.jpg" alt="" />
+      <img
+        class="helados"
+        src="assets/2Banner-web-Peru-tentacion-mobile.jpg"
+        alt=""
+      />
+      <img class="helados" src="assets/arcor.jpg" alt="" />
+      <img class="helados" src="assets/home-1700669037231.jpg" alt="" />
     </div>
-=======
-    <br><br>
+    =======
+    <br /><br />
 
     <div>
-        <iframe src="Cards.html" class="card"></iframe>
+      <iframe src="Cards.html" class="card"></iframe>
     </div>
-<<<<<<< HEAD
+    <<<<<<< HEAD
 
-    <br><br>
-=======
-    
-      <br><br>
->>>>>>> 909ed8d31bc241109ed8318b786db49e1a8eadab
->>>>>>> 0891c04557096b8ebaa724fffb0158296c5ec1b0
+    <br /><br />
+    =======
+
+    <br /><br />
+    >>>>>>> 909ed8d31bc241109ed8318b786db49e1a8eadab >>>>>>>
+    0891c04557096b8ebaa724fffb0158296c5ec1b0
     <footer class="Pie_de_pagina">
-        <div class="Grupo-1">
-            <div class="box">
-                <figure>
-                    <a href="#">
-                        <img src="assets/logo.png" alt="Logo" class="footer-logo" />
-                    </a>
-                </figure>
-            </div>
-            <div class="box">
-                <h2>SOBRE NOSOTROS</h2>
-                <p class="parrafofooter">Todo lo que necesitas, te lo llevamos.</p>
-                <p class="parrafofooter">
-                    Nos especializamos en delivery de comida rápida. Trabajamos con los
-                    mejores restaurantes para ofrecerte lo mejor sin encargarnos de la
-                    preparación. ¡Disfruta de tu comida favorita sin salir de casa!
-                </p>
-            </div>
-            <div class="box">
-                <h2>SIGUENOS</h2>
-                <div class="red-social">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                </div>
-            </div>
+      <div class="Grupo-1">
+        <div class="box">
+          <figure>
+            <a href="#">
+              <img src="assets/logo.png" alt="Logo" class="footer-logo" />
+            </a>
+          </figure>
         </div>
-        <div class="Grupo-2">
-            <small>&copy; 2024 <b>Carpincho group</b> - Todos los Derechos
-                reservados</small>
-            <br /><br />
-            <small><b class="elementor-repeater-item-7ff727f is-visible">Creado</b></small>
-            <small><b class="elementor-repeater-item-b4772af is-visible">Armado</b></small>
-            <small><b class="elementor-repeater-item-ffcf205 is-visible">Pensado</b></small>
-            <small><b><b class="elementor-repeater-item-b0b3fa4 is-visible">Diseñado</b></b></small>
-            <i class="fa-solid fa-people-group">
-                Por Pueblerinos Digital Services</i>
+        <div class="box">
+          <h2>SOBRE NOSOTROS</h2>
+          <p class="parrafofooter">Todo lo que necesitas, te lo llevamos.</p>
+          <p class="parrafofooter">
+            Nos especializamos en delivery de comida rápida. Trabajamos con los
+            mejores restaurantes para ofrecerte lo mejor sin encargarnos de la
+            preparación. ¡Disfruta de tu comida favorita sin salir de casa!
+          </p>
         </div>
+        <div class="box">
+          <h2>SIGUENOS</h2>
+          <div class="red-social">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-youtube"></a>
+          </div>
+        </div>
+      </div>
+      <div class="Grupo-2">
+        <small
+          >&copy; 2024 <b>Carpincho group</b> - Todos los Derechos
+          reservados</small
+        >
+        <br /><br />
+        <small
+          ><b class="elementor-repeater-item-7ff727f is-visible"
+            >Creado</b
+          ></small
+        >
+        <small
+          ><b class="elementor-repeater-item-b4772af is-visible"
+            >Armado</b
+          ></small
+        >
+        <small
+          ><b class="elementor-repeater-item-ffcf205 is-visible"
+            >Pensado</b
+          ></small
+        >
+        <small
+          ><b
+            ><b class="elementor-repeater-item-b0b3fa4 is-visible"
+              >Diseñado</b
+            ></b
+          ></small
+        >
+        <i class="fa-solid fa-people-group">
+          Por Pueblerinos Digital Services</i
+        >
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
