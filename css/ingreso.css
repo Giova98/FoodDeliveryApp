@@ -1,0 +1,123 @@
+body {
+    background-image: url(assets/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: Nunito;
+    margin-top: 70px;
+    text-align: center;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+   
+}
+
+.logo{
+    display: flex;
+    position: absolute;
+    left: 12%;
+    margin-top: 70px;
+ }
+.caja1 {
+    cursor: pointer;
+    font-weight: 600;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 30%;
+    background-color: rgb(79, 158, 238);
+    border-color: rgb(79, 158, 238);
+    color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+}
+
+.caja2 {
+    cursor: pointer;
+    font-weight: 600;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 30%;
+    background-color: rgb(39, 177, 39);
+    border-color: rgb(39, 177, 39);
+    color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+}
+
+.caja3 {
+    cursor: pointer;
+    font-weight: 600;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 30%;
+    background-color: crimson;
+    border-color: crimson;
+    color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+}
+
+.caja4 {
+    cursor: pointer;
+    font-weight: 600;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 30%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(177, 177, 177);
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+}
+
+.caja1:hover {
+    width: 300px;
+    height: 55px;
+    transition: 0.2s;
+    background-color: rgb(35, 118, 201);
+}
+
+.caja2:hover {
+    width: 300px;
+    height: 55px;
+    transition: 0.2s;
+    background-color: rgb(30, 148, 30);
+}
+
+.caja3:hover {
+    width: 300px;
+    height: 55px;
+    transition: 0.2s;
+    background-color: rgb(128, 24, 44);
+}
+
+.caja4:hover {
+    width: 300px;
+    height: 55px;
+    transition: 0.2s;
+    background-color: rgb(209, 209, 209);
+}
+
+.ingreso {
+    box-shadow: 2px 2px 2px 2px rgb(61, 60, 60);
+    border: 2px solid rgb(195, 189, 188);
+    margin-left: 40%;
+    width: 60%;
+    border-radius: 7px;
+    margin-top: 1%;
+    padding-bottom: 15%;
+    background-color: rgb(252, 252, 252);
+}
