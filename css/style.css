@@ -146,57 +146,115 @@ a.button:hover {
   transition: all 0.4s ease;
 }
 
-/* Footer con uso de grid layout */
+/* Footer con uso de grid layout //////////////////////////////////////////////////////*/
 .Pie_de_pagina {
   background-color: #000;
   transition: background-color 0.3s ease;
-  padding: 35px 0;
+  padding: 20px 0;
 }
 
 .Pie_de_pagina .Grupo-1 {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Mejor para responsive */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 50px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
-
-.Pie_de_pagina .box {
-  text-align: center;
+.box {
+  display: block;
+}
+/* Aca son las animaciones del footer que son las redes sociales //////////////////////////////////////////// */
+ul {
+  list-style: none;
 }
 
-.Pie_de_pagina .box img:hover {
-  transform: scale(1.1);
+.example-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
 }
-
-.Pie_de_pagina .red-social a {
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
-  background-color: #fff;
-  color: #000;
-  border-radius: 50%;
-  margin-right: 10px;
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
   transition: all 0.3s ease;
 }
-
-.Pie_de_pagina .red-social a:hover {
-  background-color: #ffae00;
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: 6px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  color: #4d4d4d;
+  background-color: #ffff;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+.example-2 .icon-content a[data-social="spotify"] .filled,
+.example-2 .icon-content a[data-social="spotify"] ~ .tooltip {
+  background-color: #1db954;
+}
+.example-2 .icon-content a[data-social="pinterest"] .filled,
+.example-2 .icon-content a[data-social="pinterest"] ~ .tooltip {
+  background-color: #bd081c;
+}
+.example-2 .icon-content a[data-social="dribbble"] .filled,
+.example-2 .icon-content a[data-social="dribbble"] ~ .tooltip {
+  background-color: #ea4c89;
+}
+.example-2 .icon-content a[data-social="telegram"] .filled,
+.example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
+  background-color: #0088cc;
 }
 
-/* Media queries para mobile */
-@media (max-width: 800px) {
-  .Pie_de_pagina .Grupo-1 {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-}
-
-/* Cards optimizadas */
+/* Cards optimizadas///////////////////////////////////////////////////////////////////// */
 .card {
   width: 100%;
   margin: 20px;
