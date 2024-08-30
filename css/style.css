@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Reset básico y tipografía */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  color: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #ffae00; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #044f3f; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #ffae00; /* creates padding around scroll thumb */
+}
+/* Estilo global para imágenes */
+img {
+  height: 95px;
+  max-width: 100%;
+  display: block; /* Mejor práctica para asegurar la responsividad */
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo h2 {
+  color: #ffae00;
+}
+/* Fondo de imagen fija */
+.img-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Estilos para el header */
+.header {
+  background-color: #044f3f;
+  color: #ffae00;
+  display: flex;
+  justify-content: space-between; /* Cambiado para espaciar entre logo y navegación */
+  align-items: center;
+  padding: 1.2rem 2rem;
+  min-height: 75px;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li a {
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  transition: color 0.5s;
+}
+
+.navbar li a:hover {
+  color: #ffae00;
+}
+
+/* Se agrupan estilos comunes para botones */
+button,
+a.button {
+  display: inline-block; /* Para que los links también se vean como botones */
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  background-color: #ffae00;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+a.button:hover {
+  background-color: #044f3f;
+  color: #fff;
+  transition: 0.6s all;
+}
+
+/* Contenedor de filtros y ordenamiento */
+.filtrar,
+.relevancia {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+  font-size: 15px;
+  margin: 20px 4% 10px;
+}
+
+/* Mejor manejo de los botones de filtrar */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.quevas {
+  color: white;
+  text-align: center;
+  font-size: 55px;
+  margin-top: 140px;
+  padding-bottom: 20%;
+  font-weight: bolder;
+}
+.lomas {
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 10%;
+}
+
+.seleccion {
+  font-size: 1.4em;
+  padding: 0.6em 0.8em;
+  border-radius: 0.5em;
+  border: none;
+  color: #ffae00;
+  cursor: pointer;
+  padding: 8px;
+  background-color: transparent;
+  font-size: 15px;
+  border-radius: 0.9em;
+  transition: all 0.4s ease;
+}
+
+/* Footer con uso de grid layout */
+.Pie_de_pagina {
+  background-color: #000;
+  transition: background-color 0.3s ease;
+  padding: 35px 0;
+}
+
+.Pie_de_pagina .Grupo-1 {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Mejor para responsive */
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.Pie_de_pagina .box {
+  text-align: center;
+}
+
+.Pie_de_pagina .box img:hover {
+  transform: scale(1.1);
+}
+
+.Pie_de_pagina .red-social a {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.Pie_de_pagina .red-social a:hover {
+  background-color: #ffae00;
+}
+
+/* Media queries para mobile */
+@media (max-width: 800px) {
+  .Pie_de_pagina .Grupo-1 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Cards optimizadas */
+.card {
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translate(-1%);
+}
+
+.card img {
+  height: 210px;
+}
+
+.card .contenido {
+  padding: 15px;
+  color: #6a6a6a;
+}
+
+.card .contenido a {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  color: #2fb4cc;
+  border: 1px solid #2fb4cc;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+}
+
+.card .contenido a:hover {
+  background-color: #2fb4cc;
+  color: white;
+}
+/* --------------------------QUIENES SOMOS CSS -------------------------------------------------------- */
+.main-quienes-somos {
+  padding: 1px 10px 1px 10px;
+  color: #000;
+}
+.main-quienes-somos .titulo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+.main-quienes-somos .titulo .elUl {
+  display: flex;
+  flex-wrap: wrap;
+}
