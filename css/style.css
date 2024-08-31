@@ -31,11 +31,15 @@ img {
   height: 95px;
   max-width: 100%;
   display: block; /* Mejor práctica para asegurar la responsividad */
+  filter: brightness(50%);
 }
-.logo {
+.logo{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.logo img{
+  filter: brightness(80%);
 }
 .logo a {
   font-size: 25px;
@@ -55,7 +59,7 @@ img {
 
 /* Estilos para el header */
 .header {
-  background-color: #044f3f;
+  background-color: #000000;
   color: #ffae00;
   display: flex;
   justify-content: space-between; /* Cambiado para espaciar entre logo y navegación */
@@ -79,6 +83,74 @@ img {
 .navbar li a:hover {
   color: #ffae00;
 }
+/* aca va el slider profesional usando swipper que es para promocionar/////////////////////////// */
+.swiper-hero {    
+  width: 100%;
+  max-width: 1600px;
+  
+}
+
+.swiper-hero .swiper-slide {
+  
+  width: 250px;
+}
+
+.swiper-hero img {
+  height: 255px;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(90%);
+}
+
+@media (min-width: 1024px) {
+  .swiper-hero img {
+    height: 344px;
+  }
+}
+
+.swiper-hero .swiper-button-prev,
+.swiper-hero .swiper-button-next {
+  --swiper-navigation-size: 20px;
+  background-color: white;
+  height: 70px;
+  width: 50px;
+  margin-top: -35px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.swiper-hero .swiper-button-prev {
+  border-radius: 0 65px 65px 0;
+  left: -10px;
+}
+.swiper-hero .swiper-button-next {
+  border-radius: 65px 0 0 65px;
+  right: -10px;
+}
+
+.swiper-hero:hover .swiper-button-prev,
+.swiper-hero:hover .swiper-button-next {
+  opacity: 2;
+}
+
+.swiper-hero .swiper-pagination {
+  --swiper-pagination-color: white;
+  --swiper-pagination-bullet-size: 6px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
+}
+
+.swiper-hero .swiper-pagination-bullet {
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.swiper-hero .swiper-pagination-bullet-active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+/* aca termina el slider profesional swiper hecho con javascript html y css  */
 
 /* Se agrupan estilos comunes para botones */
 button,
@@ -124,10 +196,69 @@ a.button:hover {
   color: white;
   text-align: center;
   font-size: 55px;
-  margin-top: 140px;
+  margin-top: 110px;
   padding-bottom: 20%;
   font-weight: bolder;
 }
+/* Arranca la Card de que vas a llevar*/ 
+.cardpadre{ 
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: -200px;
+  padding: 20px;
+}
+.card {
+  display: flex;
+  width: 25%;
+  border-radius: 20px;
+  background: #000000;
+  padding: 1.2rem;
+  border: 2px solid #ffae00;
+  transition: 0.5s ease-out;
+  overflow: visible;
+ }
+ 
+ .card-details {
+  color: #ffffff;
+  height: 100%;
+  gap: 1em;
+  display: grid;
+  place-content: center;
+ }
+ 
+ .card-button {
+  width: 30%;
+  border-radius: 2rem;
+  border: none;
+  background-color: #ffae00;
+  color: #fff;
+  font-size: 14px;
+  opacity: 0;
+  transition: 0.8s ease-out;
+ }
+ 
+ .text-body {
+  color: #ffae00;
+ }
+ 
+ /*Text*/
+ .text-title {
+  font-size: 1.5em;
+  font-weight: bold;
+ }
+ 
+ /*Hover*/
+ .card:hover {
+  border-color: #044f3f;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+ }
+ 
+ .card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+ }
+ /* termina la card que que vas a llevar //////////////////////////////////////// */
 .lomas {
   text-align: center;
   font-size: 35px;
@@ -163,9 +294,11 @@ a.button:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  width: 80%;
 }
-.box {
-  display: block;
+.Pie_de_pagina .Grupo-1 .box {
+  width: 55%;
+  text-wrap: wrap;
 }
 /* Aca son las animaciones del footer que son las redes sociales //////////////////////////////////////////// */
 ul {
@@ -257,7 +390,7 @@ ul {
 }
 
 /* Cards optimizadas///////////////////////////////////////////////////////////////////// */
-.card {
+/* .card {
   width: 100%;
   margin: 20px;
   border-radius: 6px;
@@ -295,7 +428,7 @@ ul {
 .card .contenido a:hover {
   background-color: #2fb4cc;
   color: white;
-}
+} */
 /* --------------------------QUIENES SOMOS CSS -------------------------------------------------------- */
 .main-quienes-somos {
   padding: 1px 10px 1px 10px;
