@@ -42,7 +42,8 @@ img {
   filter: brightness(80%);
 }
 .logo a {
-  font-size: 25px;
+  font-size: 20px;
+  opacity: 70%;
   font-weight: bolder;
   color: #ffae00;
 }
@@ -246,7 +247,7 @@ a.button:hover {
 .lomas {
   text-align: center;
   font-size: 35px;
-  padding-bottom: 10%;
+  padding-bottom: 3%;
 }
 /* slider html css de lo mas  elegidos ................................................... */
 .slider {
@@ -269,6 +270,7 @@ a.button:hover {
 }
 
 .slider .slide img {
+  border-radius: 50%;
   filter: brightness(100%);
   top: 0;
   object-fit: cover;
@@ -451,7 +453,101 @@ ul {
   background-color: #2fb4cc;
   color: white;
 } */
+/* --------------------------FORMULARIO DE CONTACTO-------------------------------------------------------- */
+
+.main {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+}
+
+.texto-lado {
+  display: flex;
+  text-align: left;
+  padding: 40px;
+  border-radius: 30px;
+  background-color: rgba(4, 79, 63, 0.8);
+  color: #ffae00;
+}
+
+.texto-lado h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+}
+
+.color {
+  display: flex;
+  background-color: rgba(4, 79, 63, 0.8);
+  color: #ffae00;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.formulario h2 {
+  width: 400px;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.Grupo-Nombre input, .Grupo-Contactos input, .Grupo-Seleccion select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.button {
+  text-align: right;
+}
+
+.button button {
+  background-color: #ffae00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button button:hover {
+  background-color: #044f3f;
+}
+
+.Grupo-Nombre, .Grupo-Contactos, .Grupo-Seleccion {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Grupo-Nombre input, .Grupo-Contactos input {
+  width: 48%;
+}
+
+.Grupo-Seleccion select {
+  width: 48%;
+}
+
 /* --------------------------QUIENES SOMOS CSS -------------------------------------------------------- */
+
 .main-quienes-somos {
   padding: 1px 10px 1px 10px;
   color: #000;
