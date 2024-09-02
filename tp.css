@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://www.blogdelfotografo.com/wp-content/uploads/2020/03/portada-comida-scaled.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo al hacer scroll */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Aumenta el tamaño de la columna de la imagen */
+    gap: 20px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+}
+
+.texto-lado {
+    grid-column: span 2;
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #8aa5c0; /* Fondo del texto */
+    color: #ffffff; /* Color del texto en blanco */
+}
+
+.texto-lado h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1 {
+    border-radius: 15px;
+    width: 100%;
+    max-width: 350px; /* Incrementa el tamaño máximo de la imagen */
+    height: auto;
+    object-fit: cover;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.color {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.formulario h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.Grupo-Nombre input, .Grupo-Contactos input, .Grupo-Seleccion select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.button {
+    text-align: right;
+}
+
+.button button {
+    background-color: #507ba2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button button:hover {
+    background-color: #365e82;
+}
+
+.Grupo-Nombre, .Grupo-Contactos, .Grupo-Seleccion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Grupo-Nombre input, .Grupo-Contactos input {
+    width: 48%;
+}
+
+.Grupo-Seleccion select {
+    width: 48%;
+}
