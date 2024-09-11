@@ -8,6 +8,7 @@
     height: fit-content;
     border-radius: 9px;
     flex-basis: 50%;
+    padding: 100px 100px 500px 500px;
   }
   
   .login-form {
@@ -29,8 +30,9 @@
   }
   
   .title {
-    font-weight: 700;
-    font-size: 15px;
+    display: flex;
+    font-weight: bold;
+    font-size: 25px;
     line-height: 21px;
     text-align: center;
     color: #2B2B2F;
@@ -39,7 +41,6 @@
   
   .description {
     max-width: 80%;
-    margin: auto;
     font-weight: 600;
     font-size: 10px;
     line-height: 14px;
@@ -90,7 +91,7 @@
     gap: 10px;
     width: 100%;
     height: 36px;
-    background: linear-gradient(180deg, #4480FF 0%, #115DFC 50%, #0550ED 100%);
+    background: linear-gradient(180deg, black 0%, rgb(9, 9, 9) 50%, black 100%);
     box-shadow: 0px 0.5px 0.5px #EFEFEF, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
     border-radius: 5px;
     border: 0;
@@ -182,50 +183,35 @@
   }
   
   .testimonial {
-    width: 250px;
+    width: 300px;
     height: auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 40px; 
     padding: 20px;
-    background: linear-gradient(358.31deg,#fff -24.13%,hsla(0,0%,100%,0) 338.58%),linear-gradient(89.84deg,rgba(230,36,174,.15) .34%,rgba(94,58,255,.15) 16.96%,rgba(10,136,255,.15) 34.66%,rgba(75,191,80,.15) 50.12%,rgba(137,206,0,.15) 66.22%,rgba(239,183,0,.15) 82%,rgba(246,73,0,.15) 99.9%);
+    background: linear-gradient(358.31deg, #fff -24.13%, hsla(0, 0%, 100%, 0) 338.58%),
+                linear-gradient(89.84deg, rgba(230, 36, 174, .15) .34%, rgba(94, 58, 255, .15) 16.96%, rgba(10, 136, 255, .15) 34.66%, rgba(75, 191, 80, .15) 50.12%, rgba(137, 206, 0, .15) 66.22%, rgba(239, 183, 0, .15) 82%, rgba(246, 73, 0, .15) 99.9%);
     border-radius: 0 9px 9px 0;
   }
   
   .testimonial p {
+    margin: 0; 
     color: #4d4c6d;
     font-size: 11px;
-    text-align: center;
     font-weight: 600;
-  }
-  
-  .user-profile-picture {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #00000011;
+    flex: 1; 
   }
   
   .user {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
-    justify-content: center;
-    gap: 3px;
+    gap: 5px; 
   }
   
   .username {
     color: #4d4c6d;
     font-size: 11px;
-    text-align: center;
-    font-weight: 600;
-  }
-  
-  .occupation {
-    color: rgb(141, 140, 161);
-    font-size: 10px;
-    text-align: center;
     font-weight: 600;
   }
