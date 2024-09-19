@@ -3,30 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Register</title>
   </head>
-
+  
   <body>
-    <div class="logo">
-      <img src="assets/logo.png" alt="" />
-    </div>
-
-    <div class="ingreso">
-      <h1>Registrate o inicia sesion para continuar</h1>
-      <br /><br />
-      <form class="cajass" action="">
-        <input class="caja1" type="button" value="Continuar con Google" />
-        <br /><br />
-        <input
-          class="caja2"
-          type="button"
-          value="Continuar con numero de teléfono"
-        />
-        <input class="caja3" type="button" value="Registrarme" />
-        <br /><br />
-        <input class="caja4" type="button" value="Ya tengo cuenta" />
-      </form>
+    <div class="cuerpo">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="" />
+      </div>
+      <div class="box-principal">
+        <div class="titulo">
+          <h1>Regístrate o inicia sesión para continuar</h1>
+        </div>
+        <button class="cajas caja1"><i class="fab fa-google"></i><span>Continuar con Google</span></button>
+        <button class="cajas caja2"><i class="fab fa-facebook-f"></i><span>Continuar con Facebook</span></button>
+        <button class="cajas caja3"><i class="fab fa-apple"></i><span>Continuar con Apple</span></button>
+        <button class="cajas caja4"><i class="fas fa-user"></i><span>Ya tengo una cuenta</span></button>
+      </div>
     </div>
   </body>
 </html>
