@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     event.preventDefault();
 
     const nombre = form.querySelector('input[placeholder="Primer nombre"]').value.trim();
+    const telefono = form.querySelector('input[type="tel"]').value.trim();
     const email = form.querySelector('input[type="email"]').value.trim();
     const mensaje = form.querySelector('textarea').value.trim();
 
@@ -60,6 +61,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if (!/^[a-zA-Z\s]+$/.test(nombre)) {
       alert("El nombre no puede contener números.");
       return;
+    }
+    if (!/^[0-9]+$/.test(telefono)) {
+      alert("Tu telefono tiene que contenter numeros");
     }
     alert('Formulario validado y listo para enviar.');
   })
