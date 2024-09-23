@@ -1,3 +1,4 @@
+/*
 const swiper = new Swiper(".swiper-hero", {
     // Optional parameters
     // slidesPerView: "auto",
@@ -34,3 +35,34 @@ const swiper = new Swiper(".swiper-hero", {
     //   draggable: true,
     // },
   });
+*/
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("anda");
+});
+
+  const form = document.querySelector('.formulario')
+
+  form.addEventListener('submit' , function(event){
+    event.preventDefault();
+
+    const nombre = form.querySelector('input[placeholder="Primer nombre"]').value.trim();
+    const email = form.querySelector('input[type="email"]').value.trim();
+    const mensaje = form.querySelector('textarea').value.trim();
+
+    if (!nombre || !email || !mensaje){
+      alert("Por favor , Completa los Campos Requeridos")
+      return;
+    }
+    if (!email.includes('@')) {
+      alert('Por favor, ingresa un correo electrónico válido.');
+      return;
+    }
+    if (!/^[a-zA-Z\s]+$/.test(nombre)) {
+      alert("El nombre no puede contener números.");
+      return;
+    }
+    alert('Formulario validado y listo para enviar.');
+  })
+  
+
+  console.log("main.js cargado correctamente");
