@@ -10,9 +10,7 @@
 }
 
 body {
-    background-image: url(../assets/sergey-kotenev-4JO6mE0TEWY-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #ffff;
 }
 
 .cuerpo {
@@ -33,7 +31,6 @@ img {
     align-items: center;
     flex-direction: column;
     gap: 12px;
-    background-color: #0b6955af; 
     flex-basis: 50%;
     width: 45%;
     border-radius: 20px;
@@ -41,10 +38,9 @@ img {
 
 .titulo {
     padding: 20px;
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
     margin-bottom: 30px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.562);
     border-radius: 20px;
     color: #ffae00;
 }

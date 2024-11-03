@@ -1,0 +1,47 @@
+@media screen and (max-width: 1024px) {
+  .cardpadre {
+    margin-top: -100px;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-body {
+    display: none;
+  }
+  .card {
+    width: 120px;
+    padding: 5px;
+  }
+  .cardpadre {
+    gap: 5px;
+  }
+  .text-title {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .quevas {
+    margin-bottom: 5%;
+    font-size: 20px;
+  }
+  .lomas {
+    margin-top: 10%;
+    font-size: 20px;
+  }
+  #copyright {
+    display: none;
+  }
+  .Pie_de_pagina .Grupo-1 {
+    display: flex;  
+    justify-content: flex-end;
+  }
+  .box h2 {
+    color: #ffae00;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+}
