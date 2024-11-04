@@ -184,14 +184,13 @@ a.button:hover {
 }
 
 /* Contenedor de filtros y ordenamiento */
-.filtrar,
-.relevancia {
+.filtrar{
   display: flex;
   justify-content: space-evenly;
   gap: 20px;
   align-items: center;
   font-size: 15px;
-  margin: 20px 4% 10px;
+  margin: 20px 4% 10px 20px; 
 }
 
 /* Mejor manejo de los botones de filtrar */

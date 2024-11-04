@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
     <link
@@ -114,9 +115,20 @@
     <br />
     <br />
 
+    <div class="filtrar">
+      <h3>Filtrar por:</h3>
+
+      <div class="buttons">
+        <button category="promos">Promos</button>
+        <button category="todo">Todo</button>
+        <button category="novedades">Mas vendidos</button>
+      </div>
+    </div>
+
+
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
-        <div class="my-custom-card h-100">
+        <div class="my-custom-card h-100" category="novedades">
           <img
             src="../assets/coffeShop/card1.jpg"
             class="card-img-top"
@@ -136,7 +148,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="my-custom-card h-100">
+        <div class="my-custom-card h-100" category="novedades">
           <img
             src="../assets/coffeShop/card2.jpg"
             class="card-img-top"
@@ -155,7 +167,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="my-custom-card h-100">
+        <div class="my-custom-card h-100" category="promos">
           <img
             src="../assets/coffeShop/card3.jpg"
             class="card-img-top"
@@ -181,7 +193,7 @@
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
-        <div class="my-custom-card h-100">
+        <div class="my-custom-card h-100" category="promos">
           <img
             src="../assets/coffeShop/card3.jpg"
             class="card-img-top"
@@ -201,7 +213,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="my-custom-card h-100">
+        <div class="my-custom-card h-100" category="promos">
           <img
             src="../assets/coffeShop/card3.jpg"
             class="card-img-top"
@@ -220,7 +232,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="my-custom-card h-100">
+        <div class="my-custom-card h-100" category="novedades">
           <img
             src="../assets/coffeShop/card3.jpg"
             class="card-img-top"
@@ -386,6 +398,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="../javascript/main.js"></script>
+    <script src="../javascript/filtrado.js"></script>
+    
   </body>
 </html>
