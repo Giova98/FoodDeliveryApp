@@ -9,44 +9,56 @@
   list-style: none;
   text-decoration: none;
 }
+
 body {
   color: rgb(255, 255, 255);
 }
 
 body::-webkit-scrollbar {
-  width: 12px; /* width of the entire scrollbar */
+  width: 12px;
+  /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-  background: #ffae00; /* color of the tracking area */
+  background: #ffae00;
+  /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #044f3f; /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  border: 3px solid #ffae00; /* creates padding around scroll thumb */
+  background-color: #044f3f;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 3px solid #ffae00;
+  /* creates padding around scroll thumb */
 }
+
 /* Estilo global para imágenes */
 img {
   height: 95px;
   max-width: 100%;
-  display: block; /* Mejor práctica para asegurar la responsividad */
+  display: block;
+  /* Mejor práctica para asegurar la responsividad */
   filter: brightness(50%);
 }
+
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .logo img {
   filter: brightness(80%);
 }
+
 .logo a {
   font-size: 20px;
   opacity: 70%;
   font-weight: bolder;
   color: #ffae00;
 }
+
 /* Fondo de imagen fija */
 .img-fondo {
   position: fixed;
@@ -63,7 +75,8 @@ img {
   background-color: #000000;
   color: #ffae00;
   display: flex;
-  justify-content: space-between; /* Cambiado para espaciar entre logo y navegación */
+  justify-content: space-between;
+  /* Cambiado para espaciar entre logo y navegación */
   align-items: center;
   padding: 1.2rem 2rem;
   min-height: 75px;
@@ -84,6 +97,7 @@ img {
 .navbar li a:hover {
   color: #ffae00;
 }
+
 /* aca va el slider profesional usando swipper que es para promocionar/////////////////////////// */
 .swiper-hero {
   width: 100%;
@@ -91,20 +105,14 @@ img {
 }
 
 .swiper-hero .swiper-slide {
-  width: 150px;
+  width: auto;
 }
 
 .swiper-hero img {
-  height: 255px;
-  width: 100%;
+  height: auto;
+  max-height: 255px;
   object-fit: cover;
-  filter: brightness(90%);
-}
-
-@media (min-width: 1024px) {
-  .swiper-hero img {
-    height: 225px;
-  }
+  filter: brightness(100%);
 }
 
 .swiper-hero .swiper-button-prev,
@@ -114,7 +122,6 @@ img {
   height: 70px;
   width: 50px;
   margin-top: -35px;
-
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -123,6 +130,7 @@ img {
   border-radius: 0 65px 65px 0;
   left: -10px;
 }
+
 .swiper-hero .swiper-button-next {
   border-radius: 65px 0 0 65px;
   right: -10px;
@@ -130,7 +138,7 @@ img {
 
 .swiper-hero:hover .swiper-button-prev,
 .swiper-hero:hover .swiper-button-next {
-  opacity: 2;
+  opacity: 1;
 }
 
 .swiper-hero .swiper-pagination {
@@ -149,12 +157,14 @@ img {
 .swiper-hero .swiper-pagination-bullet-active {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
 }
+
 /* aca termina el slider profesional swiper hecho con javascript html y css  */
 
 /* Se agrupan estilos comunes para botones */
 button,
 a.button {
-  display: inline-block; /* Para que los links también se vean como botones */
+  display: inline-block;
+  /* Para que los links también se vean como botones */
   padding: 10px 20px;
   font-weight: 600;
   font-size: 15px;
@@ -199,6 +209,7 @@ a.button:hover {
   padding-bottom: 20%;
   font-weight: bolder;
 }
+
 /* Arranca la Card de que vas a llevar*/
 .cardpadre {
   display: flex;
@@ -227,6 +238,7 @@ a.button:hover {
   display: grid;
   place-content: center;
 }
+
 .text-body {
   display: flex;
   justify-content: center;
@@ -253,33 +265,39 @@ a.button:hover {
   font-size: 35px;
   padding-bottom: 3%;
 }
+
 /* slider html css de lo mas  elegidos ................................................... */
-.slider {
-  width: 75vw;
-  height: auto;
-  margin: auto;
+.recomendaciones {
+  padding: 20px;
+  max-width: 100%;
   overflow: hidden;
-  margin-bottom: 10%;
 }
 
-.slider .slide-track {
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-track {
   display: flex;
-  animation: scroll 40s linear infinite;
-  -webkit-animation: scroll 40s linear infinite;
-  width: calc(200px * 14);
+  animation: scroll 20s linear infinite;
+  /* Animación continua */
 }
 
-.slider .slide {
-  width: 200px;
+.slide {
+  flex: 0 0 auto;
+  /* Evita que las imágenes se compriman */
+  width: 100px;
+  /* Ajusta este tamaño según sea necesario */
+  margin: 0 10px;
+  /* Espaciado entre imágenes */
 }
 
-.slider .slide img {
-  border-radius: 50%;
-  filter: brightness(100%);
-  top: 0;
-  object-fit: cover;
-  width: 75%;
-  height: 90%;
+.slide img {
+  width: 100%;
+  /* Las imágenes ocupan todo el ancho del slide */
+  height: auto;
+  /* Mantiene la proporción de la imagen */
 }
 
 @keyframes scroll {
@@ -287,11 +305,13 @@ a.button:hover {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   100% {
     -webkit-transform: translateX(calc(-200px * 7));
     transform: translateX(calc(-200px * 7));
   }
 }
+
 /* slider html css de lo mas  elegidos ................................................... */
 .seleccion {
   font-size: 1.4em;
@@ -324,10 +344,12 @@ a.button:hover {
   padding: 0 15px;
   width: 80%;
 }
+
 .Pie_de_pagina .Grupo-1 .box {
   width: 55%;
   text-wrap: wrap;
 }
+
 /* Aca son las animaciones del footer que son las redes sociales //////////////////////////////////////////// */
 ul {
   list-style: none;
@@ -340,10 +362,12 @@ ul {
   gap: 10px;
   align-items: center;
 }
+
 .example-2 .icon-content {
   margin: 0 10px;
   position: relative;
 }
+
 .example-2 .icon-content .tooltip {
   position: absolute;
   top: -10px;
@@ -357,11 +381,13 @@ ul {
   font-size: 14px;
   transition: all 0.3s ease;
 }
+
 .example-2 .icon-content:hover .tooltip {
   opacity: 1;
   visibility: visible;
   top: 6px;
 }
+
 .example-2 .icon-content a {
   position: relative;
   overflow: hidden;
@@ -375,18 +401,22 @@ ul {
   background-color: #ffff;
   transition: all 0.3s ease-in-out;
 }
+
 .example-2 .icon-content a:hover {
   box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
 }
+
 .example-2 .icon-content a svg {
   position: relative;
   z-index: 1;
   width: 30px;
   height: 30px;
 }
+
 .example-2 .icon-content a:hover {
   color: white;
 }
+
 .example-2 .icon-content a .filled {
   position: absolute;
   top: auto;
@@ -397,21 +427,26 @@ ul {
   background-color: #000;
   transition: all 0.3s ease-in-out;
 }
+
 .example-2 .icon-content a:hover .filled {
   height: 100%;
 }
+
 .example-2 .icon-content a[data-social="spotify"] .filled,
 .example-2 .icon-content a[data-social="spotify"] ~ .tooltip {
   background-color: #1db954;
 }
+
 .example-2 .icon-content a[data-social="pinterest"] .filled,
 .example-2 .icon-content a[data-social="pinterest"] ~ .tooltip {
   background-color: #bd081c;
 }
+
 .example-2 .icon-content a[data-social="dribbble"] .filled,
 .example-2 .icon-content a[data-social="dribbble"] ~ .tooltip {
   background-color: #ea4c89;
 }
+
 .example-2 .icon-content a[data-social="telegram"] .filled,
 .example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
   background-color: #0088cc;
@@ -492,6 +527,7 @@ h1 {
   padding: 20px;
   border-radius: 15px;
 }
+
 .formulario {
   max-width: 600px;
   margin: auto;
@@ -563,11 +599,13 @@ textarea {
   padding: 1px 10px 1px 10px;
   color: #000;
 }
+
 .main-quienes-somos .titulo {
   display: flex;
   justify-content: center;
   margin-bottom: 10%;
 }
+
 .main-quienes-somos .titulo .elUl {
   display: flex;
   flex-wrap: wrap;
@@ -635,21 +673,26 @@ textarea {
   .main {
     flex-direction: column;
   }
+
   .texto-lado h1 {
     padding: 5px;
     font-size: 15px;
   }
+
   .formulario {
     width: 420px;
   }
 }
+
 @media screen and (max-width: 600px) {
   .logo {
     display: none;
   }
+
   .formulario {
     width: 320px;
   }
+
   .formulario {
     padding: 15px;
   }
@@ -691,14 +734,15 @@ textarea {
     background-color: #0056b3;
   }
 }
+
 @media (max-width: 320px) {
-   select {
-      font-size: 4px;
-      padding: 8px;
+  select {
+    font-size: 4px;
+    padding: 8px;
   }
 
   button {
-      padding: 8px 16px;
-      font-size: 16px;
+    padding: 8px 16px;
+    font-size: 16px;
   }
 }

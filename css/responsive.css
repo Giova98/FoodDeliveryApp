@@ -1,11 +1,25 @@
 @media screen and (max-width: 1024px) {
+  .swiper-hero img {
+    height: 225px;
+  }
   .cardpadre {
     margin-top: -100px;
     padding: 5px;
   }
 }
+@media (min-width: 900px) {
+  .slide {
+    width: 200px; /* Aumenta el tamaño en pantallas aún más grandes */
+  }
+}
 
 @media screen and (max-width: 768px) {
+  .parrafofooter {
+    display: none;
+  }
+  .swiper-hero img {
+    height: 200px; /* Cambia para pantallas pequeñas */
+  }
   .text-body {
     display: none;
   }
@@ -33,15 +47,41 @@
     display: none;
   }
   .Pie_de_pagina .Grupo-1 {
-    display: flex;  
+    display: flex;
     justify-content: flex-end;
   }
   .box h2 {
+    display: none;
     color: #ffae00;
   }
   .header {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
+  }
+}
+@media (max-width: 600px) {
+  .example-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Pie_de_pagina .Grupo-1 {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    justify-content: center; /* Centra los elementos */
+    align-items: center; /* Centra los elementos */
+    gap: 20px; /* Reduce el espacio entre elementos */
+    width: 100%; /* Usa el 100% del ancho */
+  }
+}
+@media (max-width: 400px) {
+  .recomendaciones {
+    padding: 10px;
+  }
+}
+@media (min-width: 600px) {
+  .slide {
+    width: 150px;
   }
 }
