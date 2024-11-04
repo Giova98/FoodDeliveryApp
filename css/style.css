@@ -206,7 +206,7 @@ a.button:hover {
   text-align: center;
   font-size: 55px;
   margin-top: 110px;
-  padding-bottom: 20%;
+  padding-bottom: 30%;
   font-weight: bolder;
 }
 
@@ -280,7 +280,7 @@ a.button:hover {
 
 .slide-track {
   display: flex;
-  animation: scroll 20s linear infinite;
+  animation: scroll 34s linear infinite;
   /* Animación continua */
 }
 
