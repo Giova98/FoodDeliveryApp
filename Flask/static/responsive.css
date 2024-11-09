@@ -1,0 +1,158 @@
+@media screen and (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .texto-lado h1 {
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .formulario {
+    width: 420px;
+  }
+  .swiper-hero img {
+    height: 225px;
+  }
+  .cardpadre {
+    margin-top: -100px;
+    padding: 5px;
+  }
+}
+@media (min-width: 900px) {
+  .slide {
+    width: 200px; /* Aumenta el tamaño en pantallas aún más grandes */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .parrafofooter {
+    display: none;
+  }
+  .swiper-hero img {
+    height: 200px; /* Cambia para pantallas pequeñas */
+  }
+  .text-body {
+    display: none;
+  }
+  .card {
+    width: 120px;
+    padding: 5px;
+  }
+  .cardpadre {
+    gap: 5px;
+  }
+  .text-title {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .quevas {
+    margin-bottom: 5%;
+    font-size: 27px;
+  }
+  .lomas {
+    margin-top: 10%;
+    font-size: 20px;
+  }
+  #copyright {
+    display: none;
+  }
+  .Pie_de_pagina .Grupo-1 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .box h2 {
+    display: none;
+    color: #ffae00;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+
+  .formulario {
+    width: 320px;
+  }
+
+  .formulario {
+    padding: 15px;
+  }
+
+  .Grupo-Nombre,
+  .Grupo-Contactos,
+  .Grupo-Seleccion {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ffae00;
+    border-radius: 4px;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+  .example-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Pie_de_pagina .Grupo-1 {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    justify-content: center; /* Centra los elementos */
+    align-items: center; /* Centra los elementos */
+    gap: 20px; /* Reduce el espacio entre elementos */
+    width: 100%; /* Usa el 100% del ancho */
+  }
+}
+@media (max-width: 400px) {
+  .recomendaciones {
+    padding: 10px;
+  }
+}
+@media (max-width: 320px) {
+  select {
+    font-size: 4px;
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 600px) {
+  .slide {
+    width: 150px;
+  }
+}

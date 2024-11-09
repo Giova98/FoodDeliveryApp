@@ -1,0 +1,675 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Reset básico y tipografía */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  color: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #ffae00;
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #044f3f;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 3px solid #ffae00;
+  /* creates padding around scroll thumb */
+}
+
+/* Estilo global para imágenes */
+img {
+  height: 95px;
+  max-width: 100%;
+  display: block;
+  /* Mejor práctica para asegurar la responsividad */
+  filter: brightness(90%);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  filter: brightness(80%);
+}
+
+.logo a {
+  font-size: 20px;
+  opacity: 70%;
+  font-weight: bolder;
+  color: #ffae00;
+}
+
+/* Fondo de imagen fija */
+.img-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Estilos para el header */
+.header {
+  background-color: #000000;
+  color: #ffae00;
+  display: flex;
+  justify-content: space-between;
+  /* Cambiado para espaciar entre logo y navegación */
+  align-items: center;
+  padding: 1.2rem 2rem;
+  min-height: 75px;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li a {
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  transition: color 0.5s;
+}
+
+.navbar li a:hover {
+  color: #ffae00;
+}
+
+/* aca va el slider profesional usando swipper que es para promocionar/////////////////////////// */
+.swiper-hero {
+  width: 100%;
+  max-width: 1600px;
+}
+
+.swiper-hero .swiper-slide {
+  width: auto;
+}
+
+.swiper-hero img {
+  height: auto;
+  max-height: 255px;
+  object-fit: cover;
+  filter: brightness(100%);
+}
+
+.swiper-hero .swiper-button-prev,
+.swiper-hero .swiper-button-next {
+  --swiper-navigation-size: 20px;
+  background-color: white;
+  height: 70px;
+  width: 50px;
+  margin-top: -35px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.swiper-hero .swiper-button-prev {
+  border-radius: 0 65px 65px 0;
+  left: -10px;
+}
+
+.swiper-hero .swiper-button-next {
+  border-radius: 65px 0 0 65px;
+  right: -10px;
+}
+
+.swiper-hero:hover .swiper-button-prev,
+.swiper-hero:hover .swiper-button-next {
+  opacity: 1;
+}
+
+.swiper-hero .swiper-pagination {
+  --swiper-pagination-color: white;
+  --swiper-pagination-bullet-size: 6px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
+}
+
+.swiper-hero .swiper-pagination-bullet {
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.swiper-hero .swiper-pagination-bullet-active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+/* aca termina el slider profesional swiper hecho con javascript html y css  */
+
+/* Se agrupan estilos comunes para botones */
+button,
+a.button {
+  display: inline-block;
+  /* Para que los links también se vean como botones */
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  background-color: #ffae00;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+a.button:hover {
+  background-color: #044f3f;
+  color: #fff;
+  transition: 0.6s all;
+}
+
+/* Contenedor de filtros y ordenamiento */
+.filtrar{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+  font-size: 15px;
+  margin: 20px 4% 10px 20px; 
+}
+
+/* Mejor manejo de los botones de filtrar */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.quevas {
+  color: white;
+  text-align: center;
+  font-size: 55px;
+  margin-top: 110px;
+  padding-bottom: 30%;
+  font-weight: bolder;
+}
+
+/* Arranca la Card de que vas a llevar*/
+.cardpadre {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: -200px;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  border-radius: 20px;
+  background: #000000;
+  padding: 1.2rem;
+  border: 2px solid #ffae00;
+  transition: 0.5s ease-out;
+  overflow: visible;
+}
+
+.card-details {
+  color: #ffffff;
+  height: 100%;
+  gap: 1em;
+  display: grid;
+  place-content: center;
+}
+
+.text-body {
+  display: flex;
+  justify-content: center;
+  color: #ffae00;
+}
+
+/*Text*/
+.text-title {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/*Hover*/
+.card:hover {
+  border-color: #044f3f;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* termina la card que que vas a llevar //////////////////////////////////////// */
+.lomas {
+  text-align: center;
+  font-size: 35px;
+  padding-bottom: 3%;
+}
+
+/* slider html css de lo mas  elegidos ................................................... */
+.recomendaciones {
+  padding: 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  animation: scroll 34s linear infinite;
+  /* Animación continua */
+}
+
+.slide {
+  flex: 0 0 auto;
+  /* Evita que las imágenes se compriman */
+  width: 100px;
+  /* Ajusta este tamaño según sea necesario */
+  margin: 0 10px;
+  /* Espaciado entre imágenes */
+}
+
+.slide img {
+  width: 100%;
+  /* Las imágenes ocupan todo el ancho del slide */
+  height: auto;
+  /* Mantiene la proporción de la imagen */
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(calc(-200px * 7));
+    transform: translateX(calc(-200px * 7));
+  }
+}
+
+/* slider html css de lo mas  elegidos ................................................... */
+.seleccion {
+  font-size: 1.4em;
+  padding: 0.6em 0.8em;
+  border-radius: 0.5em;
+  border: none;
+  color: #ffae00;
+  cursor: pointer;
+  padding: 8px;
+  background-color: transparent;
+  font-size: 15px;
+  border-radius: 0.9em;
+  transition: all 0.4s ease;
+}
+
+/* Footer con uso de grid layout //////////////////////////////////////////////////////*/
+.Pie_de_pagina {
+  background-color: #000;
+  transition: background-color 0.3s ease;
+  padding: 20px 0;
+}
+
+.Pie_de_pagina .Grupo-1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 80%;
+}
+
+.Pie_de_pagina .Grupo-1 .box {
+  width: 55%;
+  text-wrap: wrap;
+}
+
+/* Aca son las animaciones del footer que son las redes sociales //////////////////////////////////////////// */
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: 6px;
+}
+
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  color: #4d4d4d;
+  background-color: #ffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+}
+
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.example-2 .icon-content a:hover {
+  color: white;
+}
+
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="spotify"] .filled,
+.example-2 .icon-content a[data-social="spotify"] ~ .tooltip {
+  background-color: #1db954;
+}
+
+.example-2 .icon-content a[data-social="pinterest"] .filled,
+.example-2 .icon-content a[data-social="pinterest"] ~ .tooltip {
+  background-color: #bd081c;
+}
+
+.example-2 .icon-content a[data-social="dribbble"] .filled,
+.example-2 .icon-content a[data-social="dribbble"] ~ .tooltip {
+  background-color: #ea4c89;
+}
+
+.example-2 .icon-content a[data-social="telegram"] .filled,
+.example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
+  background-color: #0088cc;
+}
+
+/* Cards optimizadas///////////////////////////////////////////////////////////////////// */
+/* .card {
+  width: 100%;
+  margin: 20px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translate(-1%);
+}
+
+.card img {
+  height: 210px;
+}
+
+.card .contenido {
+  padding: 15px;
+  color: #6a6a6a;
+}
+
+.card .contenido a {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  color: #2fb4cc;
+  border: 1px solid #2fb4cc;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+}
+
+.card .contenido a:hover {
+  background-color: #2fb4cc;
+  color: white;
+} */
+/* --------------------------FORMULARIO DE CONTACTO-------------------------------------------------------- */
+
+.main {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 80px;
+  background-color: #000;
+}
+
+.texto-lado {
+  display: flex;
+  text-align: left;
+  padding: 20px;
+  border-radius: 30px;
+  color: #ffae00;
+}
+
+.texto-lado h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.color {
+  display: flex;
+  color: #ffae00;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.formulario {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.formulario h2 {
+  width: 300px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.Grupo-Nombre input,
+.Grupo-Contactos input,
+.Grupo-Seleccion select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.button {
+  text-align: right;
+}
+
+.button button {
+  background-color: #ffae00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button button:hover {
+  background-color: #044f3f;
+}
+
+.Grupo-Nombre,
+.Grupo-Contactos,
+.Grupo-Seleccion {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Grupo-Nombre input,
+.Grupo-Contactos input {
+  width: 88%;
+}
+
+.Grupo-Seleccion select {
+  width: 48%;
+}
+
+/* --------------------------QUIENES SOMOS CSS -------------------------------------------------------- */
+
+.main-quienes-somos {
+  padding: 1px 10px 1px 10px;
+  color: #000;
+}
+
+.main-quienes-somos .titulo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.main-quienes-somos .titulo .elUl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* --------------------------RESTAURANT CSS -------------------------------------------------------- */
+
+/* ---------------slide carrousel ---------------- */
+
+#carouselExampleCaptions {
+  width: 100%;
+  max-width: auto;
+  margin: auto;
+}
+
+#carouselExampleCaptions .carousel-item img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 10%;
+}
+
+.carousel-item img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ---------------cards ---------------- */
+
+.my-custom-card {
+  max-width: 900px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+.my-custom-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-footer {
+  border-top: none;
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+
+.error-text {
+  color: red;
+  font-size: 12px;
+}

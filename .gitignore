@@ -1,6 +1,7 @@
-# Ignoramos la carpeta node_modules
+# Ignoramos la carpeta node_modules y el entorno virtual
 node_modules/
-
+.venv
+README.md
 # Ignoramos los archivos de configuración de paquetes
 package.json
 package-lock.json

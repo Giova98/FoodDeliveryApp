@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delivery App</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='responsive.css') }}" />
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo del sitio" />
+      <a href="{{ url_for('index') }}">&copy;CARPYFOOD</a>
+    </div>
+
+    <nav>
+      <ul class="navbar">
+        <li><a href="{{ url_for('index') }}">Inicio</a></li>
+        <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+        <li><a href="{{ url_for('registrate') }}">Registrarte</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Swiper Section -->
+  <div class="swiper swiper-hero">
+    <div class="swiper-wrapper">
+      {% for image in ['mc.png', 'grido.png', 'subway.png', 'kfc.png', 'clubmila.png'] %}
+      <div class="swiper-slide">
+        <img src="{{ url_for('static', filename='assets/' + image) }}" alt="Imagen de slide" />
+      </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+  <!-- Main Section -->
+  <main>
+    <img src="{{ url_for('static', filename='assets/fondo-inicio.jpg') }}" alt="Fondo de inicio" class="img-fondo" />
+    <h3 class="quevas">¿ Qué vas a llevar hoy ?</h3>
+    
+    <!-- Card Section -->
+    <div class="cardpadre">
+      {% for category in [
+          { 'title': 'Restaurant', 'body': 'LOS MEJORES SELECCIONADOS', 'url': 'restaurant' },
+          { 'title': 'Helados', 'body': 'IDEAL CON ESTE CLIMA', 'url': 'helado' },
+          { 'title': 'Café', 'body': 'DESPIERTA TUS SENTIDOS', 'url': 'cafeDely' },
+          { 'title': 'Tiendas', 'body': 'LAS MEJORES TIENDAS', 'url': 'tiendas' }
+        ] 
+      %}
+      <div class="card">
+        <a href="{{ url_for(category.url) }}">
+          <div class="card-details">
+            <p class="text-title">{{ category.title }}</p>
+            <p class="text-body">{{ category.body }}</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Recommendations Section -->
+    <div class="recomendaciones">
+      <h2 class="lomas">¡Los más elegidos!</h2>
+      <div class="slider">
+        <div class="slide-track">
+          {% for slide_image in ['mcdoo.png', 'coca.png', 'kaefece.png', 'Imagen-Novedades-400x400-1.jpg', 'images.png', 'bk.png', 'Mostaza_company_logo.png'] %}
+          <div class="slide">
+            <img src="{{ url_for('static', filename='assets/' + slide_image) }}" alt="Imagen de recomendación" />
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="Pie_de_pagina">
+    <div class="Grupo-1">
+      <div class="box">
+        <h2>SOBRE NOSOTROS</h2>
+        <p class="parrafofooter">Todo lo que necesitas, te lo llevamos.</p>
+        <p class="parrafofooter">
+          Nos especializamos en delivery de comida rápida. ¡Disfruta de tu comida favorita sin salir de casa!
+        </p>
+      </div>
+      
+      <!-- Social Icons Section -->
+      <ul class="example-2">
+        <li class="icon-content">
+          <a href="https://www.spotify.com/" aria-label="Spotify" data-social="spotify">
+            <div class="filled"></div>
+            <svg version="1.1" viewBox="0 0 100 100">
+              <path d="M50,4C24.7,4,4,24.7,4,50s20.6,46,46,46s46-20.6,46-46S75.4,4,50,4z M71.6,71.5c0,0,0,0.1-0.1,0.1c-0.8,1.2-2,1.8-3.2,1.8..." fill="currentColor"></path>
+            </svg>
+          </a>
+          <div class="tooltip">Spotify</div>
+        </li>
+        <li class="icon-content">
+          <a href="https://www.pinterest.com/" aria-label="Pinterest" data-social="pinterest">
+            <div class="filled"></div>
+            <svg version="1.1" viewBox="0 0 100 100">
+              <path d="M83,17.8C74.5,8.9,63.4,4.3,50,4.1C37.7,4.2,26.8,8.6,17.9,17.3C8.9,26,4.3,37,4.1,50c0,0,0,0,0,0c0,9.1,2.5,17.4,7.4..." fill="currentColor"></path>
+            </svg>
+          </a>
+          <div class="tooltip">Pinterest</div>
+        </li>
+        <li class="icon-content">
+          <a href="https://dribbble.com/" aria-label="Dribbble" data-social="dribbble">
+            <div class="filled"></div>
+            <svg version="1.1" viewBox="0 0 100 100">
+              <path d="M83.5,18.5C74.9,9.3,62.8,4,50.2,4c-6.1,0-12,1.1-17.6,3.4C15.2,14.5,4,31.3,4,50c0,13.9,6.2,26.9,17,35.7..." fill="currentColor"></path>
+            </svg>
+          </a>
+          <div class="tooltip">Dribbble</div>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <!-- JS Scripts -->
+  <script src="{{ url_for('static', filename='javascript/main.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</body>
+</html>

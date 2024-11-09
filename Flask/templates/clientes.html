@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes | CARPYFOOD</title>
+</head>
+<body>
+  <h2>Lista de Clientes</h2>
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Teléfono</th>
+      <th>Motivo</th>
+      <th>Mensaje</th>
+    </tr>
+    {% for cliente in clientes %}
+    <tr>
+      <td>{{ cliente.id }}</td>
+      <td>{{ cliente.nombre }}</td>
+      <td>{{ cliente.email }}</td>
+      <td>{{ cliente.telefono }}</td>
+      <td>{{ cliente.motivo }}</td>
+      <td>{{ cliente.mensaje }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
