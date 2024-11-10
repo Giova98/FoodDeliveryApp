@@ -30,11 +30,24 @@ def add_Contact() -> Response:
     name: str = request.form['name']
     email: str = request.form['email']
 
+    if '@' not in email:  # Verificamos si el email tiene el símbolo @
+     return render_template ('error.html')
+    
     # Crear un nuevo objeto Contact y agregarlo a la base de datos
     new_contact: Contact = Contact(name=name, email=email)
     db.session.add(new_contact)
     db.session.commit()
 
+    return redirect(url_for('index'))
+
+@app.route('/delete/<iny:id>') # Funcion eliminar id usuario
+def delete_contact(id: int) -> Response:
+    contact: Contact = Contact.query.get(id)
+    
+    if contact:
+        db.session.delete(contacto)
+        db.session.commit()
+        
     return redirect(url_for('index'))
 
 @app.route('/registrate', methods=['GET', 'POST'])
@@ -44,7 +57,6 @@ def registrate():
 
 @app.route('/contacto')
 def contacto():
-    # Código para la vista de contacto
     return render_template('contacto.html')
 
 @app.route('/restaurant', methods=['GET', 'POST'])
@@ -57,6 +69,7 @@ def helado():
     return render_template('helado.html')
 @app.route('/cafeDely', methods=['GET', 'POST'])
 def cafeDely():
+    
     return render_template('cafeDely.html')
 
 @app.route('/tiendas', methods=['GET', 'POST'])

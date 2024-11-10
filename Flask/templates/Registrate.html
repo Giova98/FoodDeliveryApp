@@ -120,6 +120,14 @@
           >
         </div>
       </form>
+
+      <tbody>
+        <tr>
+          <th scope="row"> {{contact.name}} </th>
+          <th>
+          <a href="mailto:{{ contact.email}}"> {{contact.email}} </a>
+          </th>
+          <th> <button><a href="/delete/{{contact.id}}">Eliminar</a></button></th>
     </main>
 
     <script src="{{ url_for('static', filename='javascript/Validar_Form_register.js') }}"></script>
