@@ -5,3 +5,5 @@ README.md
 # Ignoramos los archivos de configuración de paquetes
 package.json
 package-lock.json
+
+venv/

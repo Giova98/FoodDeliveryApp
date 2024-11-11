@@ -40,7 +40,7 @@ def add_Contact() -> Response:
 
     return redirect(url_for('index'))
 
-@app.route('/delete/<iny:id>') # Funcion eliminar id usuario
+@app.route('/delete/<int:id>') # Funcion eliminar id usuario
 def delete_contact(id: int) -> Response:
     contact: Contact = Contact.query.get(id)
     
@@ -55,7 +55,7 @@ def registrate():
     # código de la vista
     return render_template('registrate.html')
 
-@app.route('/contacto')
+@app.route('/contacto', methods=['GET', 'POST'])
 def contacto():
     return render_template('contacto.html')
 
