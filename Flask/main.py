@@ -23,31 +23,16 @@ def index() -> str:
     Contacts: List[Contact] = Contact.query.all()  # Obtenemos todos los contactos
     return render_template('index.html', contacto=Contacts)
 
-
-
 @app.route('/add', methods=['POST'])
-def add_Contact() -> Response:
+def add_Contact():
     name: str = request.form['name']
     email: str = request.form['email']
-
-    if '@' not in email:  # Verificamos si el email tiene el símbolo @
-     return render_template ('error.html')
     
     # Crear un nuevo objeto Contact y agregarlo a la base de datos
     new_contact: Contact = Contact(name=name, email=email)
     db.session.add(new_contact)
     db.session.commit()
 
-    return redirect(url_for('index'))
-
-@app.route('/delete/<int:id>') # Funcion eliminar id usuario
-def delete_contact(id: int) -> Response:
-    contact: Contact = Contact.query.get(id)
-    
-    if contact:
-        db.session.delete(contacto)
-        db.session.commit()
-        
     return redirect(url_for('index'))
 
 @app.route('/registrate', methods=['GET', 'POST'])

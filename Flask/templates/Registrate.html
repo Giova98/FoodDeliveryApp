@@ -37,14 +37,14 @@
       >
         <div>
           <label
-            for="nombre"
+            for="name"
             class="block text-sm font-semibold text-gray-300 mb-1"
             >Nombre</label
           >
           <input
             type="text"
-            id="nombre"
-            name="nombre"
+            id="name"
+            name="name"
             autocomplete="name"
             class="w-full px-4 py-3 rounded bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
             placeholder="Ingresa tu nombre"
@@ -108,11 +108,12 @@
         </div>
 
         <div class="flex space-x-4">
-          <a
-            href="{{ url_for('contacto') }}"
-            class="flex-1 py-3 bg-gray-700 hover:bg-yellow-500 text-white font-semibold rounded-lg shadow-lg text-center transition duration-300 transform hover:scale-105"
-            >Registrate</a
-          >
+        <button
+          type="submit"
+          class="flex-1 py-3 bg-gray-700 hover:bg-yellow-500 text-white font-semibold rounded-lg shadow-lg text-center transition duration-300 transform hover:scale-105"
+        >
+          Registrate
+        </button>
           <a
             href="{{ url_for('index') }}"
             class="flex-1 py-3 bg-gray-700 hover:bg-yellow-500 text-white font-semibold rounded-lg shadow-lg text-center transition duration-300 transform hover:scale-105"
@@ -120,14 +121,6 @@
           >
         </div>
       </form>
-
-      <tbody>
-        <tr>
-          <th scope="row"> {{contact.name}} </th>
-          <th>
-          <a href="mailto:{{ contact.email}}"> {{contact.email}} </a>
-          </th>
-          <th> <button><a href="/delete/{{contact.id}}">Eliminar</a></button></th>
     </main>
 
     <script src="{{ url_for('static', filename='javascript/Validar_Form_register.js') }}"></script>
