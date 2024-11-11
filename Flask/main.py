@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, Response
 from flask_sqlalchemy import SQLAlchemy
-from typing import List, Any  # Usamos las importaciones correctas de tipos
+from typing import List
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Contactos.db'
@@ -13,31 +13,33 @@ class Contact(db.Model):
     name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(100), nullable=False)
 
-# Se debe llamar la función con los paréntesis para crear las tablas
+
 with app.app_context():
-    db.create_all()  # Llamamos la función correctamente
+    db.create_all()  
 
 @app.route('/')
 def index() -> str:
-    # Corregir el uso de la consulta
-    Contacts: List[Contact] = Contact.query.all()  # Obtenemos todos los contactos
+    Contacts: List[Contact] = Contact.query.all() 
     return render_template('index.html', contacto=Contacts)
 
 @app.route('/add', methods=['POST'])
 def add_Contact():
     name: str = request.form['name']
     email: str = request.form['email']
+    print(f"Nombre: {name}, Email: {email}") #verificamos que ande con los print
     
-    # Crear un nuevo objeto Contact y agregarlo a la base de datos
+    
     new_contact: Contact = Contact(name=name, email=email)
+    print(f"Datos recibidos - Nombre: {name}, Email: {email}")
+    
     db.session.add(new_contact)
     db.session.commit()
 
+    print("Contacto agregado exitosamente.") 
     return redirect(url_for('index'))
 
 @app.route('/registrate', methods=['GET', 'POST'])
 def registrate():
-    # código de la vista
     return render_template('registrate.html')
 
 @app.route('/contacto', methods=['GET', 'POST'])
@@ -46,21 +48,19 @@ def contacto():
 
 @app.route('/restaurant', methods=['GET', 'POST'])
 def restaurant():
-    # código de la vista
     return render_template('restaurant.html')
 
 @app.route('/helado', methods=['GET', 'POST'])
 def helado():
     return render_template('helado.html')
+
 @app.route('/cafeDely', methods=['GET', 'POST'])
 def cafeDely():
-    
     return render_template('cafeDely.html')
 
 @app.route('/tiendas', methods=['GET', 'POST'])
 def tiendas():
     return render_template('tiendas.html')
-
 
 if __name__ == '__main__':
     app.run(debug=True)
