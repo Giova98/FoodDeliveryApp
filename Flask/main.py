@@ -8,6 +8,8 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
+#si todo sigue sin andar se recomienda borrar toda la base de datos crear otra con otro nombre (recomendacion)
+
 class Contact(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
@@ -26,16 +28,18 @@ def index() -> str:
 def add_Contact():
     name: str = request.form['name']
     email: str = request.form['email']
-    print(f"Nombre: {name}, Email: {email}") #verificamos que ande con los print
+    print(f"Nombre: {name}, Email: {email}")
     
-    
-    new_contact: Contact = Contact(name=name, email=email)
-    print(f"Datos recibidos - Nombre: {name}, Email: {email}")
-    
-    db.session.add(new_contact)
-    db.session.commit()
+    try:
+        new_contact: Contact = Contact(name=name, email=email)
+        db.session.add(new_contact)
+        db.session.commit()
+        print("Contacto agregado exitosamente.") #los print son solo para ver en consola y ver que es lo que esta mal (borrar este mensaje despues de leer)
+    except Exception as e:
+        db.session.rollback()  
+        print(f"Error al guardar el contacto: {e}")
 
-    print("Contacto agregado exitosamente.") 
+
     return redirect(url_for('index'))
 
 @app.route('/registrate', methods=['GET', 'POST'])
