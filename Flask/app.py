@@ -56,7 +56,7 @@ def contacto():
             flash('Error al enviar el mensaje. Intenta nuevamente.', 'error')
             return redirect(url_for('contacto'))  # Redirigir nuevamente a la página de contacto
 
-    return render_template('contacto')
+    return render_template('contacto.html')
 
 @app.route('/registrate')
 def registrate():
@@ -66,6 +66,25 @@ def registrate():
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+@app.route('/restaurant')
+def restaurant():
+    return render_template('restaurant.html')  # Asegúrate de tener la plantilla 'restaurant.html' creada
+
+@app.route('/helado')
+def helado():
+    return render_template('helado.html')  # Asegúrate de tener la plantilla 'helado.html' creada
+
+@app.route('/cafeDely')
+def cafeDely():
+    return render_template('cafeDely.html')  # Asegúrate de tener la plantilla 'cafeDely.html' creada
+
+@app.route('/tiendas')
+def tiendas():
+    return render_template('tiendas.html')  # Asegúrate de tener la plantilla 'tiendas.html' creada
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

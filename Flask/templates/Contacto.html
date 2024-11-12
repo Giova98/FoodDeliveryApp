@@ -124,6 +124,16 @@
         </div>
       </form>
     </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+                <li class="alert alert-{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
     <script src="{{ url_for('static', filename='javascript/Validar_Form_contacto.js') }}"></script>
     <script
       type="text/javascript"
