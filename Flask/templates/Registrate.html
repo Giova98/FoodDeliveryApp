@@ -108,12 +108,8 @@
         </div>
 
         <div class="flex space-x-4">
-        <button
-          type="submit"
-          class="flex-1 py-3 bg-gray-700 hover:bg-yellow-500 text-white font-semibold rounded-lg shadow-lg text-center transition duration-300 transform hover:scale-105"
-        >
-          Registrate
-        </button>
+          <a href="{{ url_for('registrate') }}">Registrarse</a>
+
           <a
             href="{{ url_for('index') }}"
             class="flex-1 py-3 bg-gray-700 hover:bg-yellow-500 text-white font-semibold rounded-lg shadow-lg text-center transition duration-300 transform hover:scale-105"

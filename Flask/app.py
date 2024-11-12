@@ -1,53 +1,72 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///clientes.db'
+app.config['SECRET_KEY'] = 'tu_clave_secreta'  # Necesario para los mensajes flash
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///contactos.db'  # Base de datos en SQLite
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
 db = SQLAlchemy(app)
 
-# Modelo para almacenar los datos de contacto
-class Cliente(db.Model):
+# Modelo de Contacto
+class Contacto(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nombre = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(100), nullable=False)
-    telefono = db.Column(db.String(20), nullable=True)
+    telefono = db.Column(db.String(15), nullable=True)
     motivo = db.Column(db.String(50), nullable=False)
     mensaje = db.Column(db.Text, nullable=False)
 
-# Crear la base de datos
+    def __repr__(self):
+        return f"<Contacto {self.nombre}>"
+
+# Crear todas las tablas en la base de datos dentro del contexto de la app
 with app.app_context():
     db.create_all()
 
-# Ruta para mostrar el formulario de contacto y procesar el envío
 @app.route('/contacto', methods=['GET', 'POST'])
 def contacto():
     if request.method == 'POST':
-        nombre = request.form['nombre']
-        email = request.form['email']
-        telefono = request.form.get('telefono')
-        motivo = request.form['motivo']
-        mensaje = request.form['mensaje']
+        try:
+            # Obtener datos del formulario
+            nombre = request.form['nombre']
+            email = request.form['email']
+            telefono = request.form.get('telefono')  # Opcional
+            motivo = request.form['motivo']
+            mensaje = request.form['mensaje']
 
-        # Crear un nuevo cliente y agregarlo a la base de datos
-        nuevo_cliente = Cliente(nombre=nombre, email=email, telefono=telefono, motivo=motivo, mensaje=mensaje)
-        db.session.add(nuevo_cliente)
-        db.session.commit()
+            # Crear una nueva instancia de Contacto
+            nuevo_contacto = Contacto(
+                nombre=nombre,
+                email=email,
+                telefono=telefono,
+                motivo=motivo,
+                mensaje=mensaje
+            )
 
-        # Mostrar en consola los datos enviados
-        print(f"Nombre: {nombre}, Email: {email}, Teléfono: {telefono}, Motivo: {motivo}, Mensaje: {mensaje}")
+            # Agregar y guardar en la base de datos
+            db.session.add(nuevo_contacto)
+            db.session.commit()
 
-        return redirect(url_for('contacto'))  # Redirige después de enviar el formulario
+            # Mensaje de confirmación para el usuario
+            flash('Mensaje enviado con éxito', 'success')
+            return redirect(url_for('index'))  # Redirigir a la página de inicio o a otra página
 
-    return render_template('contacto.html')
+        except Exception as e:
+            db.session.rollback()  # Revertir los cambios si ocurre un error
+            flash('Error al enviar el mensaje. Intenta nuevamente.', 'error')
+            return redirect(url_for('contacto'))  # Redirigir nuevamente a la página de contacto
 
-# Ruta para ver la lista de clientes en una página especial
-@app.route('/clientes')
-def clientes():
-    # Obtener todos los clientes desde la base de datos
-    clientes = Cliente.query.all()
-    return render_template('clientes.html', clientes=clientes)
+    return render_template('contacto')
+
+@app.route('/registrate')
+def registrate():
+    return render_template('registrate.html')
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
+
